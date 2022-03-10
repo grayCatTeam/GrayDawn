@@ -137,6 +137,10 @@ cart-items {
   }
 }
 
+.cart-terms {
+  font-size: 13px;
+}
+
 .cart__ctas button {
   width: 100%;
 }
