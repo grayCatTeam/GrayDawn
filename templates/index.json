@@ -3,8 +3,8 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/1_1.png",
-        "image_overlay_opacity": 20,
+        "image": "shopify:\/\/shop_images\/sezon_sonu_Indirimi.png",
+        "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": true,
         "desktop_content_position": "top-right",
