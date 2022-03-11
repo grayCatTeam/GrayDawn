@@ -52,7 +52,7 @@
       ],
       "settings": {
         "title": "",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "color_scheme": "background-1",
         "swipe_on_mobile": true,
         "image_padding": false,
