@@ -16,6 +16,49 @@
         "show_text_below": true
       }
     },
+    "1644172060c2b9a1cf": {
+      "type": "collection-list",
+      "blocks": {
+        "16441720603af58ea3-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kadin"
+          }
+        },
+        "16441720603af58ea3-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "erkek"
+          }
+        },
+        "16441720603af58ea3-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kiz-cocuk"
+          }
+        },
+        "c85d6381-c77c-4b42-9a15-08a2d08f3838": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "erkek-cocuk"
+          }
+        }
+      },
+      "block_order": [
+        "16441720603af58ea3-0",
+        "16441720603af58ea3-1",
+        "16441720603af58ea3-2",
+        "c85d6381-c77c-4b42-9a15-08a2d08f3838"
+      ],
+      "settings": {
+        "title": "",
+        "image_ratio": "square",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": true,
+        "image_padding": false,
+        "show_view_all": false
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -63,55 +106,12 @@
         "desktop_layout": "left",
         "mobile_layout": "collage"
       }
-    },
-    "1644172060c2b9a1cf": {
-      "type": "collection-list",
-      "blocks": {
-        "16441720603af58ea3-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "kadin"
-          }
-        },
-        "16441720603af58ea3-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "erkek"
-          }
-        },
-        "16441720603af58ea3-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "kiz-cocuk"
-          }
-        },
-        "c85d6381-c77c-4b42-9a15-08a2d08f3838": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "erkek-cocuk"
-          }
-        }
-      },
-      "block_order": [
-        "16441720603af58ea3-0",
-        "16441720603af58ea3-1",
-        "16441720603af58ea3-2",
-        "c85d6381-c77c-4b42-9a15-08a2d08f3838"
-      ],
-      "settings": {
-        "title": "",
-        "image_ratio": "square",
-        "color_scheme": "background-1",
-        "swipe_on_mobile": true,
-        "image_padding": false,
-        "show_view_all": false
-      }
     }
   },
   "order": [
     "image_banner",
+    "1644172060c2b9a1cf",
     "featured_products",
-    "collage",
-    "1644172060c2b9a1cf"
+    "collage"
   ]
 }
