@@ -52,7 +52,7 @@
       ],
       "settings": {
         "title": "",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "color_scheme": "background-1",
         "swipe_on_mobile": true,
         "image_padding": false,
@@ -90,16 +90,25 @@
         "5b87122b-54aa-4e00-9437-5346929ebbc4": {
           "type": "product",
           "settings": {
-            "product": "kiz-cocuk-nar-cicegi-kisa-kol-pijama-takimi",
+            "product": "22159-kadin-dugmeli-sort-takim",
             "second_image": true,
             "image_padding": false,
             "secondary_background": false
+          }
+        },
+        "5f006a99-c034-4c34-b83b-0651161602a8": {
+          "type": "collection",
+          "settings": {
+            "collection": "kadin",
+            "image_padding": false,
+            "color_scheme": "background-1"
           }
         }
       },
       "block_order": [
         "product",
-        "5b87122b-54aa-4e00-9437-5346929ebbc4"
+        "5b87122b-54aa-4e00-9437-5346929ebbc4",
+        "5f006a99-c034-4c34-b83b-0651161602a8"
       ],
       "settings": {
         "heading": "",
