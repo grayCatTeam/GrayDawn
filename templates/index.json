@@ -16,47 +16,126 @@
         "show_text_below": true
       }
     },
-    "1644172060c2b9a1cf": {
-      "type": "collection-list",
+    "collage": {
+      "type": "collage",
       "blocks": {
-        "16441720603af58ea3-0": {
-          "type": "featured_collection",
+        "5b87122b-54aa-4e00-9437-5346929ebbc4": {
+          "type": "product",
           "settings": {
-            "collection": "kadin"
+            "product": "arnetta-kadin-sort-takimi-gokyuzu-mavisi",
+            "second_image": true,
+            "image_padding": false,
+            "secondary_background": false
           }
         },
-        "16441720603af58ea3-1": {
-          "type": "featured_collection",
+        "product": {
+          "type": "product",
           "settings": {
-            "collection": "erkek"
+            "product": "arnetta-cicek-desenli-kirmizi-kadin-pijama-takimi",
+            "second_image": true,
+            "image_padding": false,
+            "secondary_background": true
           }
         },
-        "16441720603af58ea3-2": {
-          "type": "featured_collection",
+        "5f006a99-c034-4c34-b83b-0651161602a8": {
+          "type": "collection",
           "settings": {
-            "collection": "kiz-cocuk"
-          }
-        },
-        "c85d6381-c77c-4b42-9a15-08a2d08f3838": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "erkek-cocuk"
+            "collection": "kadin",
+            "image_padding": false,
+            "color_scheme": "background-1"
           }
         }
       },
       "block_order": [
-        "16441720603af58ea3-0",
-        "16441720603af58ea3-1",
-        "16441720603af58ea3-2",
-        "c85d6381-c77c-4b42-9a15-08a2d08f3838"
+        "5b87122b-54aa-4e00-9437-5346929ebbc4",
+        "product",
+        "5f006a99-c034-4c34-b83b-0651161602a8"
       ],
       "settings": {
-        "title": "",
-        "image_ratio": "square",
-        "color_scheme": "background-1",
-        "swipe_on_mobile": true,
-        "image_padding": false,
-        "show_view_all": false
+        "heading": "KADIN",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "1646992547a662c5fd": {
+      "type": "collage",
+      "blocks": {
+        "1646992547f0e256a3-1": {
+          "type": "product",
+          "settings": {
+            "product": "arnetta-all-you-need-is-family-gokyuzu-mavisi-erkek-bermuda-takim",
+            "second_image": true,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        },
+        "466ef280-25cf-4b0b-93f9-df0bcb58482d": {
+          "type": "product",
+          "settings": {
+            "product": "erkek-ekru-t-shirt-sort-takim",
+            "second_image": true,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        },
+        "1646992547f0e256a3-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "erkek",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "1646992547f0e256a3-1",
+        "466ef280-25cf-4b0b-93f9-df0bcb58482d",
+        "1646992547f0e256a3-2"
+      ],
+      "settings": {
+        "heading": "ERKEK",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "16469927219908c378": {
+      "type": "collage",
+      "blocks": {
+        "164699272123721676-1": {
+          "type": "product",
+          "settings": {
+            "product": "arnetta-kiz-cocuk-sort-takimi-gokyuzu-mavisi",
+            "second_image": false,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        },
+        "164699272123721676-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "kiz-cocuk",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "4fa8ad67-ae35-4c38-a6e2-45638cb3d745": {
+          "type": "collection",
+          "settings": {
+            "collection": "erkek-cocuk",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "164699272123721676-1",
+        "164699272123721676-2",
+        "4fa8ad67-ae35-4c38-a6e2-45638cb3d745"
+      ],
+      "settings": {
+        "heading": "ÇOCUK",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
       }
     },
     "featured_products": {
@@ -74,53 +153,13 @@
         "show_vendor": false,
         "show_rating": false
       }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "arnetta-cicek-desenli-kirmizi-kadin-pijama-takimi",
-            "second_image": true,
-            "image_padding": false,
-            "secondary_background": true
-          }
-        },
-        "5b87122b-54aa-4e00-9437-5346929ebbc4": {
-          "type": "product",
-          "settings": {
-            "product": "22159-kadin-dugmeli-sort-takim",
-            "second_image": true,
-            "image_padding": false,
-            "secondary_background": false
-          }
-        },
-        "5f006a99-c034-4c34-b83b-0651161602a8": {
-          "type": "collection",
-          "settings": {
-            "collection": "kadin",
-            "image_padding": false,
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "product",
-        "5b87122b-54aa-4e00-9437-5346929ebbc4",
-        "5f006a99-c034-4c34-b83b-0651161602a8"
-      ],
-      "settings": {
-        "heading": "",
-        "desktop_layout": "left",
-        "mobile_layout": "collage"
-      }
     }
   },
   "order": [
     "image_banner",
-    "1644172060c2b9a1cf",
-    "featured_products",
-    "collage"
+    "collage",
+    "1646992547a662c5fd",
+    "16469927219908c378",
+    "featured_products"
   ]
 }
