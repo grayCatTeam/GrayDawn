@@ -5,7 +5,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/1_1.png",
         "image_overlay_opacity": 20,
-        "image_height": "small",
+        "image_height": "medium",
         "adapt_height_first_image": true,
         "desktop_content_position": "top-right",
         "show_text_box": false,
@@ -38,24 +38,25 @@
         "product": {
           "type": "product",
           "settings": {
-            "product": "21857-kadin-dugmeli-yakali-kadife-pijama-takim",
+            "product": "21821-kadin-cizgili-v-yaka-pijama-takim",
             "second_image": true,
             "image_padding": false,
             "secondary_background": true
           }
         },
-        "f0717673-6662-49f1-8fe5-a6c52b43476e": {
-          "type": "image",
+        "5b87122b-54aa-4e00-9437-5346929ebbc4": {
+          "type": "product",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rolypoly-let-it-snow-grimelanj-erkek-pijama-takimi-pijama-takimi-rolypoly-2021-k-34948-28-B.jpg",
+            "product": "little-monster-pembemelanj-kiz-cocuk-pijama-takimi",
+            "second_image": true,
             "image_padding": false,
-            "color_scheme": "background-1"
+            "secondary_background": false
           }
         }
       },
       "block_order": [
         "product",
-        "f0717673-6662-49f1-8fe5-a6c52b43476e"
+        "5b87122b-54aa-4e00-9437-5346929ebbc4"
       ],
       "settings": {
         "heading": "",
