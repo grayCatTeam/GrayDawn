@@ -137,7 +137,7 @@
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1" >
       {{ content_for_layout }}
     </main>
 
@@ -178,5 +178,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script>
+      document.querySelectorAll('.collage-wrapper').forEach( item => {
+        item.style.maxWidth = '1224px';
+      })
+    </script>
   </body>
 </html>
