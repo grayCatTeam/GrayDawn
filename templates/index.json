@@ -13,11 +13,29 @@
             "button_label": "Tüm Ürünler",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": true,
-            "box_align": "bottom-left",
+            "box_align": "bottom-center",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "e8d9d9bd-6c2a-4899-b45b-0876f984df21": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sezon_sonu_Indirimi_2.png",
+            "heading": "",
+            "heading_size": "medium",
+            "subheading": "",
+            "button_label": "ÜRÜNLER",
+            "link": "shopify:\/\/collections\/erkek-cocuk",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         },
@@ -28,10 +46,10 @@
             "heading": "",
             "heading_size": "medium",
             "subheading": "",
-            "button_label": "Ürünler",
+            "button_label": "ÜRÜNLER",
             "link": "shopify:\/\/collections\/bebek",
             "button_style_secondary": false,
-            "box_align": "bottom-center",
+            "box_align": "bottom-right",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
@@ -42,6 +60,7 @@
       },
       "block_order": [
         "1647078645a6e26daa-0",
+        "e8d9d9bd-6c2a-4899-b45b-0876f984df21",
         "1647078645a6e26daa-1"
       ],
       "settings": {
