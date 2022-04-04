@@ -100,11 +100,14 @@
 {% endjavascript %}
 
 <script>
-  if( document.getElementById('show_cart_terms').checked === false ){
-    document.querySelector('#checkout').createAttribute('disabled');
-  }
+  document.addEventListener('DOMContentLoaded', function(e) {
 
-  document.addEventListener('DOMContentLoaded', function() {
+    if( document.getElementById('show_cart_terms').checked === false ){
+      e.preventDefault();
+      document.querySelector('#checkout').createAttribute('disabled');
+      return false;
+    }
+
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
