@@ -7,7 +7,7 @@ We are still working on.
 
 If you want to set on your local first of all clone this repo on your local,
 
-git clone *****
+git clone git@github.com:grayCatTeam/shopiDawn.git
 
 and install all dependencies 
 
