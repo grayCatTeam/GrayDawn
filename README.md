@@ -1,4 +1,4 @@
-# shopiDawn
+# GrayDawn
 
 This repository taken from Shopify example template Dawn.\
 We manupilated with some new features and design. \

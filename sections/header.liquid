@@ -360,7 +360,7 @@
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                       {% render 'icon-caret' %}
                     </summary>
-                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
+                    <ul class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce megaMenu" role="list" tabindex="-1">
                       {%- for childlink in link.links -%}
                         <li>
                           {%- if childlink.links == blank -%}
@@ -368,16 +368,16 @@
                               {{ childlink.title | escape }}
                             </a>
                           {%- else -%}
-                            <details id="Details-HeaderSubMenu-{{ forloop.index }}">
+                            <details>
                               <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
                                 {{ childlink.title | escape }}
                                 {% render 'icon-caret' %}
                               </summary>
-                              <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
+                              <ul class="header__submenu list-menu motion-reduce">
                                 {%- for grandchildlink in childlink.links -%}
                                   <li>
                                     <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
+                                      {{ grandchildlink.title | escape }} Hayrettin
                                     </a>
                                   </li>
                                 {%- endfor -%}
