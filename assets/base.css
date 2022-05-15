@@ -2184,7 +2184,6 @@ details[open] > .header__icon--menu .icon-hamburger {
   transform: translateY(0);
   animation: animateMenuOpen var(--duration-default) ease;
   z-index: 1;
-  width: 100%;
 }
 
 /* Header menu */
@@ -2287,6 +2286,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 details-disclosure > details {
+  position: relative;
 }
 
 @keyframes animateMenuOpen {
@@ -2350,6 +2350,3 @@ details-disclosure > details {
   }
 }
 
-.megaMenu {
-  display: flex;
-}
