@@ -283,7 +283,6 @@ Shopify.CountryProvinceSelector.prototype = {
   }
 };
 
-
 class MenuDrawer extends HTMLElement {
   constructor() {
     super();
