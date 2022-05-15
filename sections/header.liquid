@@ -93,69 +93,81 @@
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
-                <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu list-menu" role="list">
-                    {%- for link in section.settings.menu.links -%}
-                      <li>
-                        {%- if link.links != blank -%}
-                          <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
-                              {{ link.title | escape }}
-                              {% render 'icon-arrow' %}
-                              {% render 'icon-caret' %}
-                            </summary>
-                            <div id="link-{{ link.title | escape }}" class="menu-drawer__submenu motion-reduce" tabindex="-1">
-                              <div class="menu-drawer__inner-submenu">
-                                <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                  {% render 'icon-arrow' %}
-                                  {{ link.title | escape }}
-                                </button>
-                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                  {%- for childlink in link.links -%}
-                                    <li>
-                                      {%- if childlink.links == blank -%}
-                                        <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                          {{ childlink.title | escape }}
-                                        </a>
-                                      {%- else -%}
-                                        <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
-                                          <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                            {{ childlink.title | escape }}
-                                            {% render 'icon-arrow' %}
-                                            {% render 'icon-caret' %}
-                                          </summary>
-                                          <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu motion-reduce">
-                                            <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                              {% render 'icon-arrow' %}
-                                              {{ childlink.title | escape }}
-                                            </button>
-                                            <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                              {%- for grandchildlink in childlink.links -%}
-                                                <li>
-                                                  <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                    {{ grandchildlink.title | escape }}
-                                                  </a>
-                                                </li>
-                                              {%- endfor -%}
-                                            </ul>
-                                          </div>
-                                        </details>
-                                      {%- endif -%}
-                                    </li>
-                                  {%- endfor -%}
-                                </ul>
-                              </div>
-                            </div>
-                          </details>
-                        {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
-                            {{ link.title | escape }}
-                          </a>
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
+                <!-------------------------------------------->
+                 <nav class="megaContainer--tablet">
+                   <div class="megaHeader megaHeader--tablet">
+                     {% for block in section.blocks %}
+                     {% assign blockIndex = forloop.index0 %}
+                     {% if block.settings.title == 'Home' %}
+                     <a class="megaA" href="/" style="width: 100%; text-align: left;">{{block.settings.title}}</a>
+                     {% else %}
+                     <div class="megaDrawer" style="width: 100%;">
+                       {% if block.settings.mega_url != blank %}
+                       <a class="drawerbtn megaA" href="{{block.settings.mega_url}}" style="width: 100%; justify-content: space-between;">{{block.settings.title}}</a>
+                       {% else %}
+                       <label for="megaDrawerInput--{{forloop.index0}}" class="drawerbtn drawerbtn--tablet" style="width: 100%; justify-content: space-between;">
+                         {{block.settings.title}}
+                         {% if block.settings.mega_link != blank %}
+                         <svg viewBox="0 0 10 10" class="svgDd megaSvg" data-svg="svgDd--{{forloop.index0}}">
+                           <path d="M5,6 L5,6 L2,3 L5,6 L5,6 L8,3" />
+                         </svg>
+                         <svg viewBox="0 0 10 10" class="svgClose megaSvg" data-svg="svgClose--{{forloop.index0}}">
+                           <path d="M2,2 L5,5 L8,8 L5,5 L8,2 L2,8" />
+                         </svg>
+                         {% endif %}
+                       </label>
+                       <input type="checkbox" id="megaDrawerInput--{{forloop.index0}}" onclick="checkInput(this)" data-input="{{forloop.index0}}">
+                       <div class="megaDrawerContent--tablet">
+                         {% if block.settings.title != blank %}
+                         <div class="megaDrawerHeader megaDrawerHeader--tablet" style="background-color: {{block.settings.header_bg}}">
+                           <h2>{{block.settings.header_title}}</h2>
+                         </div>
+                         {% else %}
+                         <div class="megaDrawerHeader megaDrawerHeader--tablet" style="background-color: inherit;"></div>
+                         {% endif %}
+                         <div class="megaDrawerWrapper--tablet">
+                           {% if block.settings.mega_link != blank %}
+                           <div class="megaLinkContainer" style="flex-direction: column; width: 100%;">
+                             {% for link in block.settings.mega_link.links %}
+                             <div class="megaLinkBox--tablet" {% if link.links == blank %} style="padding: 0 5%" {% endif %}>
+                               {% if link.links == blank %}
+
+                               <a class="megaLink" href="{{link.url}}">{{ link.title | escape }}</a>
+                               {% else %}
+                               <label for="megaLink--{{blockIndex}}-{{forloop.index0}}">
+
+                                 <span >{{ link.title | escape }}</span>
+                                 <span class="arrowDown">
+                                   <svg viewBox="0 0 10 10" class="childSvgDd megaSvg" data-svg="childSvgDd--{{blockIndex}}-{{forloop.index0}}">
+                                     <path d="M5,6 L5,6 L2,3 L5,6 L5,6 L8,3" />
+                                   </svg>
+                                   <svg viewBox="0 0 10 10" class="childSvgClose megaSvg" data-svg="childSvgClose--{{blockIndex}}-{{forloop.index0}}">
+                                     <path d="M2,2 L5,5 L8,8 L5,5 L8,2 L2,8" />
+                                   </svg>
+                                 </span>
+                               </label>
+                               <input type="checkbox" id="megaLink--{{blockIndex}}-{{forloop.index0}}" onclick="checkInput(this)" data-child-input="{{blockIndex}}-{{forloop.index0}}">
+                               {% endif %}
+                               <div class="childLinkContainer">
+                                 {% for child_link in link.links %}
+                                 <a href="{{child_link.url}}">{{child_link.title | escape }}</a>
+                                 {% endfor %}
+                               </div>
+                             </div>
+                             {% endfor %}
+                           </div>
+                           {% endif %}
+                         </div>
+                       </div>
+                       {% endif %}
+                     </div>
+
+                     {% endif %}
+                     {% endfor %}
+                   </div>
                 </nav>
+                
+                <!-------------------------------------------->
                 <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
