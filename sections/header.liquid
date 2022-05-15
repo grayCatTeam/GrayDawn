@@ -830,7 +830,73 @@
       "default": true,
       "label": "t:sections.header.settings.enable_sticky_header.label",
       "info": "t:sections.header.settings.enable_sticky_header.info"
-    }
+    },
+    {
+        "type": "richtext",
+        "id": "mega_drawer_image",
+        "label": "Enter the mega-link images",
+        "default": "<p> first-second-third.jpg, firstname.png, Firstname.gif<\/p>",
+        "info": "Use '-' if it is a two-word image name. File extension must match the file uploaded. Separate the image with comma. See default"
+        }
+        ],
+        "blocks": [
+        {
+        "name": "mega header",
+        "type": "mega_header",
+        "settings": [
+        {
+        "type": "checkbox",
+        "id": "mega_width",
+        "default": false,
+        "label": "Drawer full-width"
+        },
+        {
+        "type": "url",
+        "label": "mega url",
+        "id": "mega_url",
+        "info": "Provide link if no drawer"
+        },
+        {
+        "type": "text",
+        "label": "mega url title",
+        "id": "title"
+        },
+        {
+        "type": "text",
+        "label": "mega header",
+        "id": "header_title"
+        },
+        {
+        "type": "color",
+        "label": "header color",
+        "id": "header_bg"
+        },
+        {
+        "type": "image_picker",
+        "label": "mega image",
+        "id": "mega_image"
+        },
+        {
+        "type": "range",
+        "label": "mega image size",
+        "id": "mega_image_size",
+        "default": 15,
+        "max": 100,
+        "min": 10
+        },
+        {
+        "type": "link_list",
+        "label": "mega link",
+        "id": "mega_link"
+        },
+        {
+        "type": "product",
+        "label": "mega product",
+        "id": "mega_product"
+     }
+    ]
+   }    
+        
   ]
 }
 {% endschema %}
