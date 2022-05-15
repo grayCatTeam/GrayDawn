@@ -36,18 +36,6 @@
         "settings": {
         }
       },
-      "header": {
-        "type": "header",
-        "settings": {
-          "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/newgoksen.png",
-          "logo_width": 100,
-          "logo_position": "middle-left",
-          "menu": "main-menu",
-          "show_line_separator": true,
-          "enable_sticky_header": true
-        }
-      },
       "footer": {
         "type": "footer",
         "blocks": {
@@ -70,6 +58,18 @@
           "enable_country_selector": false,
           "enable_language_selector": false,
           "payment_enable": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/newgoksen.png",
+          "logo_width": 100,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
         }
       }
     },
