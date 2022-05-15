@@ -363,139 +363,139 @@
     {%- if section.settings.menu != blank -%}
       <!------------------------------------>        
        {% assign mega_img_file = section.settings.mega_drawer_image | strip_html | downcase | parse_json | append: '}' | prepend: '{' %}
-{% assign sample_img = sample | file_url %}
+              {% assign sample_img = sample | file_url %}
 
-<nav class="megaContainer" style="{% if section.settings.logo_position == 'top-center' %} grid-area: 2/-3; {% endif %} ">
-<div class="megaHeader alignCenter">
-{% for block in section.blocks %}
-{% if block.settings.title == 'Home' %}
-<a class="megaA drawerbtn" href="/">{{block.settings.title}}</a>
-{% else %}
+              <nav class="megaContainer" style="{% if section.settings.logo_position == 'top-center' %} grid-area: 2/-3; {% endif %} ">
+                <div class="megaHeader alignCenter">
+                  {% for block in section.blocks %}
+                  {% if block.settings.title == 'Home' %}
+                  <a class="megaA drawerbtn" href="/">{{block.settings.title}}</a>
+                  {% else %}
 
-<div class="megaDrawer alignCenter" style="height: 50px">
-{% if block.settings.mega_url == blank %}
-<button class="drawerbtn">{{block.settings.title}}
-<span> <svg viewBox="0 -.5 11 10" class="megaSvg">
-<path d="M5,6 L5,6 L2,3 L5,6 L5,6 L8,3" />
-</svg>
-</span>
-</button>
-{% else %}
-<a class="megaA drawerbtn" href="{{block.settings.mega_url}}">{{block.settings.title}}</a>
-{% endif %}
-{% if block.settings.mega_link != blank %}
-<div class="megaDrawerContent absolutePosition"
-style="width: {% if block.settings.mega_width == true %} 95% {% else %} min-content {% endif %};
-{% if section.settings.logo_position != 'middle-left' %} top: 100%{% endif %}">
-{% if block.settings.title != blank %}
-<div class="megaDrawerHeader"
-style="background-color: {{block.settings.header_bg}}">
-<h2>{{block.settings.header_title}}</h2>
-</div>
-{% else %}
-<div class="megaDrawerHeader"
-style="background-color: inherit;"></div>
-{% endif %}
+                  <div class="megaDrawer alignCenter" style="height: 50px">
+                    {% if block.settings.mega_url == blank %}
+                    <button class="drawerbtn">{{block.settings.title}}
+                      <span> <svg viewBox="0 -.5 11 10" class="megaSvg">
+                        <path d="M5,6 L5,6 L2,3 L5,6 L5,6 L8,3" />
+                        </svg>
+                      </span>
+                    </button>
+                    {% else %}
+                    <a class="megaA drawerbtn" href="{{block.settings.mega_url}}">{{block.settings.title}}</a>
+                    {% endif %}
+                    {% if block.settings.mega_link != blank %}
+                    <div class="megaDrawerContent absolutePosition"
+                         style="width: {% if block.settings.mega_width == true %} 95% {% else %} min-content {% endif %};
+                                {% if section.settings.logo_position != 'middle-left' %} top: 100%{% endif %}">
+                      {% if block.settings.title != blank %}
+                      <div class="megaDrawerHeader"
+                           style="background-color: {{block.settings.header_bg}}">
+                        <h2>{{block.settings.header_title}}</h2>
+                      </div>
+                      {% else %}
+                      <div class="megaDrawerHeader"
+                           style="background-color: inherit;"></div>
+                      {% endif %}
 
-<div class="megaDrawerWrapper">
-{% if block.settings.mega_link != blank %}
-<div class="megaLinkContainer">
-{% for link in block.settings.mega_link.links %}
-<div class="megaLinkBox" style="padding: 10px">
-<div class="megaLinkImage" data-mega-image="{{link.title | downcase | replace: ' ', '-' }}" >
+                      <div class="megaDrawerWrapper">
+                        {% if block.settings.mega_link != blank %}
+                        <div class="megaLinkContainer">
+                          {% for link in block.settings.mega_link.links %}
+                          <div class="megaLinkBox" style="padding: 10px">
+                            <div class="megaLinkImage" data-mega-image="{{link.title | downcase | replace: ' ', '-' }}" >
 
-</div>
-<a {% if link.links == blank %}
-class="megaLink"
-href="{{link.url}}" {% else %} style="font-weight:600; text-align: center"{% endif %}>{{ link.title | escape }}</a>
-{% for child_link in link.links %}
-<a href="{{child_link.url}}">{{child_link.title | escape }}</a>
-{% endfor %}
-</div>
-{% endfor %}
-</div>
-{% endif %}
-{% if block.settings.mega_product != blank %}
-<a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
-<div class="megaProduct">
-{%- assign product_media = block.settings.mega_product.selected_or_first_available_variant.featured_media | default: block.settings.mega_product.featured_media -%}
-<div class="megaProductImage">
-<img src="{{product_media | img_url: master }}" alt="{{product_media.alt | escape }}">
-</div>
+                            </div>
+                            <a {% if link.links == blank %}
+                               class="megaLink"
+                               href="{{link.url}}" {% else %} style="font-weight:600; text-align: center"{% endif %}>{{ link.title | escape }}</a>
+                            {% for child_link in link.links %}
+                            <a href="{{child_link.url}}">{{child_link.title | escape }}</a>
+                            {% endfor %}
+                          </div>
+                          {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% if block.settings.mega_product != blank %}
+                        <a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
+                          <div class="megaProduct">
+                            {%- assign product_media = block.settings.mega_product.selected_or_first_available_variant.featured_media | default: block.settings.mega_product.featured_media -%}
+                            <div class="megaProductImage">
+                              <img src="{{product_media | img_url: master }}" alt="{{product_media.alt | escape }}">
+                            </div>
 
-<div class="megaProductInfo">
-<h4 style="margin: 0 0 5%;">{{block.settings.mega_product.title | escape}}</h4>
-<p style="margin: 0;">{{block.settings.mega_product.price | money}}</p>
-</div>
-</div>
-</a>
-{% endif %}
-{% if block.settings.mega_image != blank %}
-{% if block.settings.mega_image_link != blank %}
-<a href="{{block.settings.mega_image_link}}">
-{% endif %}
-<div class="megaImage">
-<img src="{{block.settings.mega_image | img_url: 'master'}}" alt="{{block.settings.mega_image.alt | escape }}" style="width: {{block.settings.mega_image_size}}%;">
-</div>
-{% if block.settings.mega_image_link != blank %}</a>{% endif %}
-{% endif %}
-</div>
-</div>
-{% endif %}
+                            <div class="megaProductInfo">
+                              <h4 style="margin: 0 0 5%;">{{block.settings.mega_product.title | escape}}</h4>
+                              <p style="margin: 0;">{{block.settings.mega_product.price | money}}</p>
+                            </div>
+                          </div>
+                        </a>
+                        {% endif %}
+                        {% if block.settings.mega_image != blank %}
+                        {% if block.settings.mega_image_link != blank %}
+                        <a href="{{block.settings.mega_image_link}}">
+                          {% endif %}
+                          <div class="megaImage">
+                            <img src="{{block.settings.mega_image | img_url: 'master'}}" alt="{{block.settings.mega_image.alt | escape }}" style="width: {{block.settings.mega_image_size}}%;">
+                          </div>
+                          {% if block.settings.mega_image_link != blank %}</a>{% endif %}
+                        {% endif %}
+                      </div>
+                    </div>
+                    {% endif %}
 
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</nav>
-<script>
-function checkInput (input){
-const inputNum = input.dataset.input;
-const childInputNum = input.dataset.childInput;
-if(inputNum) {
-console.log(inputNum);
-if(input.checked == true) {
-document.querySelector(`[data-svg="svgDd--${inputNum}"]`).style.display = "none";
-document.querySelector(`[data-svg="svgClose--${inputNum}"]`).style.display = "block";
-} else {
-document.querySelector(`[data-svg="svgDd--${inputNum}"]`).style.display = "block";
-document.querySelector(`[data-svg="svgClose--${inputNum}"]`).style.display = "none";
-}
-}
-if(childInputNum) {
-console.log(childInputNum);
-if(input.checked == true) {
-document.querySelector(`[data-svg="childSvgDd--${childInputNum}"]`).style.display = "none";
-document.querySelector(`[data-svg="childSvgClose--${childInputNum}"]`).style.display = "block";
-} else {
-document.querySelector(`[data-svg="childSvgDd--${childInputNum}"]`).style.display = "block";
-document.querySelector(`[data-svg="childSvgClose--${childInputNum}"]`).style.display = "none";
-}
-}
-}
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </nav>
+              <script>
+                function checkInput (input){
+                  const inputNum = input.dataset.input;
+                  const childInputNum = input.dataset.childInput;
+                  if(inputNum) {
+                    console.log(inputNum);
+                    if(input.checked == true) {
+                      document.querySelector(`[data-svg="svgDd--${inputNum}"]`).style.display = "none";
+                      document.querySelector(`[data-svg="svgClose--${inputNum}"]`).style.display = "block";
+                    } else {
+                      document.querySelector(`[data-svg="svgDd--${inputNum}"]`).style.display = "block";
+                      document.querySelector(`[data-svg="svgClose--${inputNum}"]`).style.display = "none";
+                    }
+                  }
+                  if(childInputNum) {
+                    console.log(childInputNum);
+                    if(input.checked == true) {
+                      document.querySelector(`[data-svg="childSvgDd--${childInputNum}"]`).style.display = "none";
+                      document.querySelector(`[data-svg="childSvgClose--${childInputNum}"]`).style.display = "block";
+                    } else {
+                      document.querySelector(`[data-svg="childSvgDd--${childInputNum}"]`).style.display = "block";
+                      document.querySelector(`[data-svg="childSvgClose--${childInputNum}"]`).style.display = "none";
+                    }
+                  }
+                }
 
-const megaImgRaw = "{{mega_img_file}}";
-const megaImgSplit = megaImgRaw.split(/[,]/).map(col => col.replace(/[\"\s{}]/g, '')).map(s => s.split('.'));
-const megaImgJSON = Object.fromEntries(megaImgSplit);
+                const megaImgRaw = "{{mega_img_file}}";
+                const megaImgSplit = megaImgRaw.split(/[,]/).map(col => col.replace(/[\"\s{}]/g, '')).map(s => s.split('.'));
+                const megaImgJSON = Object.fromEntries(megaImgSplit);
 
-const megaLink = "{{sample_img}}";
+                const megaLink = "{{sample_img}}";
 
-window.onload = function () {
-const megaImage = document.querySelectorAll('.megaLinkImage');
-megaImage.forEach(function(image) {
-for(const img in megaImgJSON) {
-const imageBox = document.querySelector(`[data-mega-image="${img}"]`);
-if (image.dataset.megaImage == img) {
-const imgUrl = `${[img]}.${megaImgJSON[img]}`
-const assetImgUrl = megaLink.split('?')[0] + `${imgUrl}`;
-imageBox.insertAdjacentHTML(
-'beforeend',
-`<img src="${assetImgUrl}" alt="${assetImgUrl} + '.' + 'alt'">`);
-}
-}
-})
-}
-</script>  
+                window.onload = function () {
+                  const megaImage = document.querySelectorAll('.megaLinkImage');
+                  megaImage.forEach(function(image) {
+                    for(const img in megaImgJSON) {
+                      const imageBox = document.querySelector(`[data-mega-image="${img}"]`);
+                      if (image.dataset.megaImage == img) {
+                        const imgUrl = `${[img]}.${megaImgJSON[img]}`
+                        const assetImgUrl = megaLink.split('?')[0] + `${imgUrl}`;
+                        imageBox.insertAdjacentHTML(
+                          'beforeend',
+                          `<img src="${assetImgUrl}" alt="${assetImgUrl} + '.' + 'alt'">`);
+                      }
+                    }
+                  })
+                }
+              </script>  
       <!------------------------------------>  
     {%- endif -%}
     <div class="header__icons">
