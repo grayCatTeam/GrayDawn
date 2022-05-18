@@ -20,46 +20,10 @@
             "color_scheme": "background-2",
             "text_alignment_mobile": "center"
           }
-        },
-        "e8d9d9bd-6c2a-4899-b45b-0876f984df21": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "heading_size": "medium",
-            "subheading": "",
-            "button_label": "Ürünler",
-            "link": "shopify:\/\/collections\/erkek-cocuk",
-            "button_style_secondary": false,
-            "box_align": "bottom-left",
-            "show_text_box": false,
-            "text_alignment": "right",
-            "image_overlay_opacity": 10,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "1647078645a6e26daa-1": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "heading_size": "medium",
-            "subheading": "",
-            "button_label": "Ürünler",
-            "link": "shopify:\/\/collections\/bebek",
-            "button_style_secondary": false,
-            "box_align": "bottom-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 10,
-            "color_scheme": "accent-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "1647078645a6e26daa-0",
-        "e8d9d9bd-6c2a-4899-b45b-0876f984df21",
-        "1647078645a6e26daa-1"
+        "1647078645a6e26daa-0"
       ],
       "settings": {
         "layout": "full_bleed",
